@@ -1,0 +1,129 @@
+/* Index.css - Styling CSS For The Entire Application*/
+
+/* I Added A Linear Gradient That Matches The Pokemon Colour-Way*/
+body { background: linear-gradient(to right, #fbd743, #ff1f1f, #5db9ff); }
+
+/* Changed The Colour To White Since Black Is Hard To See, Especially With The Gradient*/
+.pokemon-count-container { text-align: center;
+  padding: 20px;
+  font-size: 34px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Just A Container That Holds The Filters*/
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Sets The Margin Betwen The Filters, Almost Like Spacign Between Items*/
+.form-check {
+  margin-right: 10px;
+}
+
+/* Styling The Check-Box Used To Filter The Pokemon*/
+.form-check-input {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+
+}
+
+/* When A Filter Is Checked Off, It Shows The Following Gradient*/
+.form-check-input:checked {
+  background: linear-gradient(to right,#54e5ff, #0082fb);
+  border-color: #ff1f1f;
+}
+
+/* Styles The Check-Boxes For The Filters*/
+.form-check-input:checked::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+}
+
+/* Also Styles The Check-Boxes For The Filters*/
+.form-check-label {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Initializes The Layout Of The Poke Cards*/
+#pokeCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Adds Multiple Modifiers Such As Shadows To The Card Itself*/
+.pokeCard {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: linear-gradient(to right, #a8e6ff, #dcedc1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Addds A Background To The Modal When You Clicl "more"*/
+.modal {
+  background: linear-gradient(to right, #fbd743, #ff1f1f, #5db9ff);
+}
+
+/* Scales The Images From The Pokemon API*/ 
+.modal img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Button Styling*/
+.btn {
+  background: linear-gradient(to right,#54e5ff, #0082fb);
+  border-color: linear-gradient(to right,#54e5ff, #0082fb);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Styles The Button When Hovered*/
+.btn:hover {
+  background: linear-gradient(to top left,#e76829, #eede00);
+  border-color: linear-gradient(to top left,#e76829, #eede00);
+}
+
+/* Changes The Colour Of The Page Button When Selected*/
+.active {
+  background: linear-gradient(to top left,#e76829, #eede00);
+  border-color: #0082fb;
+}
+
+/* Puts The Page Buttons In The Middle. Pretty Useful When On Mobile*/
+#pagination {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  padding: 60px;
+  transform: translateX(-50%);
+}
